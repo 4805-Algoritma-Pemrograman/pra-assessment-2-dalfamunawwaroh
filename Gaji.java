@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Gajii {
+public class Gaji {
     public static int masaKerja;
 
     public static void main(String[] args) {
@@ -43,7 +43,7 @@ public class Gajii {
         input.close();
 
         
-        System.out.println(Gajii.class.getDeclaredMethods().length);
-        System.out.println(Gajii.class.getDeclaredFields().length);
+        System.out.println(Gaji.class.getDeclaredMethods().length);
+        System.out.println(Gaji.class.getDeclaredFields().length);
     }
 }
