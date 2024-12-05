@@ -14,9 +14,9 @@ public class Gaji{
         
         /* Pekerjaan anda mulai dari sini */
         System.out.println("Masukan Masa Kerja : ");
-        masaKerja  = scanner.nextInt();
+        masaKerja  = input.nextInt();
         System.out.println("Masukan Jam Lembur : ");
-        jamLembur  = scanner.nextInt();
+        jamLembur  = input.nextInt();
 
         
         /* Menghitung masa kerja */
@@ -43,7 +43,7 @@ public class Gaji{
         totalGaji = gajiPokok + bonus;
         System.out.println("Total Gaji : Rp. " + totalGaji);
 
-        scanner.close();
+        input.close();
        
 
         /* Pekerjaan anda berakhir sini */
