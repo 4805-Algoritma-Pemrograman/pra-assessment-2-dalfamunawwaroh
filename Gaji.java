@@ -1,59 +1,56 @@
 import java.util.Scanner;
 
-/**
- * Program untuk menghitung total gaji berdasarkan masa kerja dan jam lembur.
- */
-public class Gaji {
-    // Variabel global untuk menyimpan masa kerja
+public class Gaji{
     public static int masaKerja;
+    public static void main(String[] args){
 
-    public static void main(String[] args) {
-        // Membuat Scanner untuk input pengguna
         Scanner input = new Scanner(System.in);
+        int jamLembur = input.nextInt();
+        int gajiPokok = 5000000;
+        int lemburPokok = 40000;
+        int totalGaji = 0;
+        int bonus = 0;
 
-        // Deklarasi variabel
-        int jamLembur;
-        int gajiPokok = 5000000; // Gaji pokok awal
-        int lemburPokok = 40000; // Tarif lembur per jam awal
-        int totalGaji;
-        int bonus = 0; // Inisialisasi bonus lembur
+        
+        /* Pekerjaan anda mulai dari sini */
+        System.out.println("Masukan Masa Kerja : ");
+        masaKerja  = scanner.nextInt();
+        System.out.println("Masukan Jam Lembur : ");
+        jamLembur  = scanner.nextInt();
 
-        // Input dari pengguna
-        System.out.print("Masukkan Masa Kerja (dalam tahun): ");
-        masaKerja = input.nextInt();
-
-        System.out.print("Masukkan Jumlah Jam Lembur: ");
-        jamLembur = input.nextInt();
-
-        // Menghitung gaji pokok dan tarif lembur berdasarkan masa kerja
-        if (masaKerja >= 5 && masaKerja <= 10) {
+        
+        /* Menghitung masa kerja */
+        if (masaKerja < 5){
+        } else if (masaKerja >=5 && masaKerja <=10){
             gajiPokok = 7500000;
             lemburPokok = 50000;
-        } else if (masaKerja > 10) {
+        } else {
             gajiPokok = 10000000;
             lemburPokok = 75000;
         }
 
-        // Menghitung bonus lembur
-        if (jamLembur > 0) {
+        
+        /* Menghitung lembur */
+        if (jamLembur < 5){
+        } else if (jamLembur >=5 && jamLembur <=10){
+            bonus = lemburPokok * jamLembur;
+        } else {
             bonus = lemburPokok * jamLembur;
         }
+        
 
-        // Menghitung total gaji
+        
         totalGaji = gajiPokok + bonus;
+        System.out.println("Total Gaji : Rp. " + totalGaji);
 
-        // Menampilkan hasil
-        System.out.println("\n--- Hasil Perhitungan Gaji ---");
-        System.out.println("Gaji Pokok: Rp. " + gajiPokok);
-        System.out.println("Bonus Lembur: Rp. " + bonus);
-        System.out.println("Total Gaji: Rp. " + totalGaji);
+        scanner.close();
+       
 
-        // Menutup Scanner
-        input.close();
+        /* Pekerjaan anda berakhir sini */
 
-        // Informasi tambahan (opsional)
-        System.out.println("\nInformasi Tambahan:");
-        System.out.println("Jumlah Method: " + Gaji.class.getDeclaredMethods().length);
-        System.out.println("Jumlah Field: " + Gaji.class.getDeclaredFields().length);
+        System.out.println(Gaji.class.getDeclaredMethods().length);
+        System.out.println(Gaji.class.getDeclaredFields().length);
+    
     }
+
 }
